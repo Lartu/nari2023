@@ -42,7 +42,7 @@ $
 
 ### Usages
 
-Relaxing. Nari can probably be also used for other things. It can probably be embedded within C++ source code as an embeddable interpreted language that you can probably hook up to C++ functions within your own code. It maybe might be used for code golfing? I don't have any particular usecases in mind. You are welcome to share yours.
+Relaxing. Nari can probably be also used for other things. It can probably be embedded within C++ source code as an embeddable interpreted language that you can probably hook up to C++ functions within your own code. It maybe might be used for code golfing? I don't have any particular usecases in mind. You are welcome to share yours. Nari is 100% production-ready if your standards are low enough.
 
 
 ### Etcetera
