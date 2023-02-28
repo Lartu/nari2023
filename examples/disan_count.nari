@@ -1,0 +1,17 @@
+# Nari Disan Count Example #
+
+{ even? 2 % 0 = }
+
+{ disan_count
+	$start
+	[ @start 0 >= :
+		@start even? (
+			@start "  is even." lf .
+		|
+			@start "  is odd." lf .
+		)
+		@start 1 - $start
+	]
+}
+
+30 disan_count
