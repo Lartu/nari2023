@@ -6,6 +6,8 @@
 
 In this particular repository, unsolicited *feature* pull requests are not welcome. Sorry. This is a personal project and I'd like to keep it that way. Ideas and bug-fixes are welcome, though.
 
+To build Nari you need C++ 98. I compile it by running `g++ -std=c++98 -pedantic nari.cpp -o=nari`.
+
 ### Some Examples
 
 Add two numbers and print them followed by a line break:
