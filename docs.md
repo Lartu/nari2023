@@ -5,7 +5,7 @@ The suggested file extension is `.nari`, but you can use whatever you want.
 
 A Nari source file is a sequence of **commands**. A command is a word surounded by whitespace.
 Commands do stuff. For example, `1`, `10`, `+` and `.` are commands. `1 10 + .` is a valid
-Nari code (which in fact prints `11`).
+Nari code (which in fact prints `11`). Nari uses reverse Polish notation.
 
 Available commands:
 - `#` starts a comment. It consumes characters from the source file until another `#` is found. Since `#` is a command, remember that it must be separated from other commands by using whitespace.
@@ -43,3 +43,47 @@ Available commands:
 - `@var` such as `@foo` or `@bar` pushes the value of the variable `foo` or `bar` or whatever to the stack.
 - `$var` such as `$foo` or `$bar` pops a value and stores it to the variable called `var` or `foo` or `bar` or whatever you like.
 - Any other word: if a command with that name has been declared, it is executed.
+
+## Command definition examples
+
+Command `sayHello` that prints `Hello!` when called.
+
+```
+{ sayHello " Hello!" lf . }
+```
+
+Command `duplicate` that pops a numeric value from the stack and duplicates it.
+
+```
+{ duplicate 2 * }
+```
+
+## While examples
+
+Count from 1 to 100.
+
+```
+1 $i
+[ @i 100 <= : @i lf . @i 1 + $i ]
+```
+
+Loop forever.
+
+```
+[ 1 : " Forever!" lf . ]
+```
+
+## If examples
+
+Check if number is even or odd.
+
+```
+55 $number
+@number 2 % 0 = ( " Is Even" lf . | " Is Odd" lf . )
+```
+
+Check if true. As you can see, the else is not mandatory.
+
+```
+1 ( " True" lf . )
+```
